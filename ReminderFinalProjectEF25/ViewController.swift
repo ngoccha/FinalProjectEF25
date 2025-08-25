@@ -11,7 +11,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
+        let vc = ReminderListVC()
+        let naviVC = UINavigationController(rootViewController: vc)
+        window?.rootViewController = naviVC
     }
 
 
