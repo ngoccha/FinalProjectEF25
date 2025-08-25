@@ -24,8 +24,9 @@ class ReminderListVC: UIViewController {
 
 
     @IBAction func addNewReminderButton(_ sender: Any) {
-        let addNewReminderVC = AddNewReminderVC()
-        self.present(addNewReminderVC, animated: true)
+        let vc1 = AddNewReminderVC()
+        let navivc = UINavigationController(rootViewController: vc1)
+        self.present(navivc, animated: true)
     }
     
     @objc func sort() {
