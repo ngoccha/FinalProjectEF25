@@ -1,0 +1,6 @@
+framework module Pods_ReminderFinalProjectEF25 {
+  umbrella header "Pods-ReminderFinalProjectEF25-umbrella.h"
+
+  export *
+  module * { export * }
+}

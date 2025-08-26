@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="ReminderCell" customModule="ReminderFinalProjectEF25" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agw-1O-fxt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yUC-56-xCA">
+                                <rect key="frame" x="16" y="6.3333333333333321" width="288" height="47.666666666666671"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-yM-9zN">
+                                        <rect key="frame" x="0.0" y="12.666666666666668" width="19.666666666666668" height="22.000000000000004"/>
+                                        <color key="tintColor" name="Neutral3"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2pL-NF-QhP"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0XK-h4-LCC">
+                                        <rect key="frame" x="35.666666666666671" y="0.0" width="216.66666666666663" height="47.666666666666664"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOa-0l-rCN">
+                                                <rect key="frame" x="0.0" y="0.0" width="216.66666666666666" height="22"/>
+                                                <color key="textColor" name="Neutral1"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-PG-9rF">
+                                                <rect key="frame" x="0.0" y="28" width="216.66666666666666" height="19.666666666666671"/>
+                                                <color key="textColor" name="Neutral2"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YW-Lm-UsY">
+                                        <rect key="frame" x="268.33333333333331" y="12.666666666666668" width="19.666666666666686" height="22.000000000000004"/>
+                                        <color key="tintColor" name="Accent"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="info.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="infoButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gtk-ti-L2g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yUC-56-xCA" firstAttribute="leading" secondItem="Agw-1O-fxt" secondAttribute="leading" constant="16" id="2IT-FH-i6n"/>
+                            <constraint firstItem="yUC-56-xCA" firstAttribute="centerY" secondItem="Agw-1O-fxt" secondAttribute="centerY" id="PCt-ot-m14"/>
+                            <constraint firstAttribute="height" constant="60" id="ljG-bM-cF6"/>
+                            <constraint firstAttribute="trailing" secondItem="yUC-56-xCA" secondAttribute="trailing" constant="16" id="qX3-2U-AuN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Agw-1O-fxt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CD5-DE-QcJ"/>
+                    <constraint firstItem="Agw-1O-fxt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OKE-Fq-TRL"/>
+                    <constraint firstAttribute="trailing" secondItem="Agw-1O-fxt" secondAttribute="trailing" id="QER-EJ-T6Z"/>
+                    <constraint firstAttribute="bottom" secondItem="Agw-1O-fxt" secondAttribute="bottom" id="f2R-fn-78o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="doneButtonOutlet" destination="wuB-yM-9zN" id="04C-bA-Mq6"/>
+                <outlet property="infoButtonOutlet" destination="6YW-Lm-UsY" id="ein-Oy-mLv"/>
+                <outlet property="reminderDescriptionTextField" destination="Lfj-PG-9rF" id="qa6-se-0Xi"/>
+                <outlet property="reminderTitleTextField" destination="LOa-0l-rCN" id="V7b-HO-E6t"/>
+            </connections>
+            <point key="canvasLocation" x="36.641221374045799" y="52.464788732394368"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="Accent">
+            <color red="0.38823529411764707" green="0.58039215686274515" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral1">
+            <color red="0.086274509803921567" green="0.098039215686274508" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral2">
+            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral3">
+            <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

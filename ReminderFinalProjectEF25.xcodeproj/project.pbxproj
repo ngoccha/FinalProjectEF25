@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D594D99FCA0AFF8FF2C3C627 /* Pods_ReminderFinalProjectEF25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0C610799E0DEB83A2E1A4 /* Pods_ReminderFinalProjectEF25.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2C71B4412E5C60FA0031AB26 /* ReminderFinalProjectEF25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderFinalProjectEF25.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C9EABFB0D0EB4E03F3B8820 /* Pods-ReminderFinalProjectEF25.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderFinalProjectEF25.debug.xcconfig"; path = "Target Support Files/Pods-ReminderFinalProjectEF25/Pods-ReminderFinalProjectEF25.debug.xcconfig"; sourceTree = "<group>"; };
+		42B0C610799E0DEB83A2E1A4 /* Pods_ReminderFinalProjectEF25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReminderFinalProjectEF25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B0906B8ABA0F1217479581 /* Pods-ReminderFinalProjectEF25.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReminderFinalProjectEF25.release.xcconfig"; path = "Target Support Files/Pods-ReminderFinalProjectEF25/Pods-ReminderFinalProjectEF25.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D594D99FCA0AFF8FF2C3C627 /* Pods_ReminderFinalProjectEF25.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249F497A4FEE83C4F98D3197 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C9EABFB0D0EB4E03F3B8820 /* Pods-ReminderFinalProjectEF25.debug.xcconfig */,
+				68B0906B8ABA0F1217479581 /* Pods-ReminderFinalProjectEF25.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2C71B4382E5C60FA0031AB26 = {
 			isa = PBXGroup;
 			children = (
 				2C71B4432E5C60FA0031AB26 /* ReminderFinalProjectEF25 */,
 				2C71B4422E5C60FA0031AB26 /* Products */,
+				249F497A4FEE83C4F98D3197 /* Pods */,
+				8166D3D2BAE1D007170EDBDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8166D3D2BAE1D007170EDBDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42B0C610799E0DEB83A2E1A4 /* Pods_ReminderFinalProjectEF25.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C71B4542E5C60FC0031AB26 /* Build configuration list for PBXNativeTarget "ReminderFinalProjectEF25" */;
 			buildPhases = (
+				2BF311AE292FCD0830CC0074 /* [CP] Check Pods Manifest.lock */,
 				2C71B43D2E5C60FA0031AB26 /* Sources */,
 				2C71B43E2E5C60FA0031AB26 /* Frameworks */,
 				2C71B43F2E5C60FA0031AB26 /* Resources */,
+				2F7632F08351E3F237BE2649 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				2C71B4432E5C60FA0031AB26 /* ReminderFinalProjectEF25 */,
 			);
 			name = ReminderFinalProjectEF25;
-			packageProductDependencies = (
-			);
 			productName = ReminderFinalProjectEF25;
 			productReference = 2C71B4412E5C60FA0031AB26 /* ReminderFinalProjectEF25.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BF311AE292FCD0830CC0074 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReminderFinalProjectEF25-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F7632F08351E3F237BE2649 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReminderFinalProjectEF25/Pods-ReminderFinalProjectEF25-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReminderFinalProjectEF25/Pods-ReminderFinalProjectEF25-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReminderFinalProjectEF25/Pods-ReminderFinalProjectEF25-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C71B43D2E5C60FA0031AB26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +213,7 @@
 /* Begin XCBuildConfiguration section */
 		2C71B4552E5C60FC0031AB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C9EABFB0D0EB4E03F3B8820 /* Pods-ReminderFinalProjectEF25.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -168,6 +242,7 @@
 		};
 		2C71B4562E5C60FC0031AB26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B0906B8ABA0F1217479581 /* Pods-ReminderFinalProjectEF25.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -231,7 +306,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
