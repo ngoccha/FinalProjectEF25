@@ -27,6 +27,7 @@ class TagVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem?.tintColor = .accent
         
+        tagCollectionView.register(UINib(nibName: "TagCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
         tagCollectionView.dataSource = self
         tagCollectionView.delegate = self
         tagCollectionView.allowsMultipleSelection = true
@@ -49,6 +50,7 @@ extension TagVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
+        return cell
     }
 }

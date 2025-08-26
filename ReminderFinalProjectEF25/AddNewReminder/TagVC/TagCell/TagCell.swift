@@ -13,7 +13,7 @@ class TagCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView.layer.cornerRadius = 16
     }
 
     func configure(title: String, selected: Bool) {
