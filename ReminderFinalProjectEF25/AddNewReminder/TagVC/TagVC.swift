@@ -11,6 +11,10 @@ class TagVC: UIViewController {
     
     @IBOutlet weak var tagCollectionView: UICollectionView!
         
+    var preselectedTags: Set<Tag> = []
+    var onSelectTags: ((Set<Tag>) -> Void)?
+    private var currentTags: Set<Tag> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +26,7 @@ class TagVC: UIViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancel))
         navigationItem.leftBarButtonItem?.tintColor = .accent
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(done))
         navigationItem.rightBarButtonItem?.tintColor = .accent
         
         tagCollectionView.register(UINib(nibName: "TagCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
@@ -31,6 +35,8 @@ class TagVC: UIViewController {
         tagCollectionView.allowsMultipleSelection = true
         tagCollectionView.layer.cornerRadius = 16
 
+        currentTags = preselectedTags
+        
     }
     
     @objc func cancel() {
@@ -38,7 +44,7 @@ class TagVC: UIViewController {
     }
     
     @objc func done() {
-        //
+        onSelectTags?(currentTags)
         dismiss(animated: true)
     }
 }
@@ -50,7 +56,17 @@ extension TagVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
-        cell.configTitle(tag: Tag.allCases[indexPath.item])
+        let tag = Tag.allCases[indexPath.item]
+        cell.configTitle(tag: tag)
+        cell.isSelected = currentTags.contains(tag)
         return cell
+    }
+    
+    func collectionView(_ cv: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentTags.insert(Tag.allCases[indexPath.item])
+    }
+
+    func collectionView(_ cv: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        currentTags.remove(Tag.allCases[indexPath.item])
     }
 }

@@ -13,7 +13,7 @@ class Reminder: Object {
     @Persisted var title = ""
     @Persisted var descriptions: String? = nil
     @Persisted var dueDate: Date? = nil
-    @Persisted var tag: String? = nil
+    @Persisted var tags = List<String>()
     @Persisted var isDone = false
     @Persisted var createdAt = Date()
     @Persisted var updatedAt = Date()
