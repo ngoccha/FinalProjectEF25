@@ -10,9 +10,7 @@ import UIKit
 class TagVC: UIViewController {
     
     @IBOutlet weak var tagCollectionView: UICollectionView!
-    
-    let tags = ["Học tập", "Công việc", "Thói quen", "Sức khoẻ"]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +29,8 @@ class TagVC: UIViewController {
         tagCollectionView.dataSource = self
         tagCollectionView.delegate = self
         tagCollectionView.allowsMultipleSelection = true
-        
+        tagCollectionView.layer.cornerRadius = 16
+
     }
     
     @objc func cancel() {
@@ -51,6 +50,7 @@ extension TagVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath) as! TagCell
+        cell.configTitle(tag: Tag.allCases[indexPath.item])
         return cell
     }
 }

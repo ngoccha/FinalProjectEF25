@@ -15,7 +15,8 @@ class ReminderListViewModel {
 
     var realmResults: Results<Reminder>!
     var reminders: [Reminder] = []
-    var currentQuery: String = ""
+    var currentQuery: String =
+    ""
     var isAscending: Bool = true
 
     init() {
@@ -47,7 +48,7 @@ class ReminderListViewModel {
     func addNewReminder() -> Reminder {
         let temp = Reminder()
         temp.createdAt = Date()
-        temp.dueDate = Date() // mặc định Today
+        temp.dueDate = Date()
         reminders.append(temp)
         onChange?()
         return temp
@@ -71,10 +72,10 @@ class ReminderListViewModel {
             ReminderRealmManager.shared.update {
                 reminder.title = cleanTitle
                 reminder.descriptions = cleanDesc
-                reminder.dueDate = dueDate // nil nếu tắt switch
+                reminder.dueDate = dueDate
             }
         }
-        performSearch(currentQuery) // refresh list + section
+        performSearch(currentQuery)
     }
 
     func isInToday(_ date: Date?) -> Bool {

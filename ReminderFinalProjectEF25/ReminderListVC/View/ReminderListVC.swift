@@ -11,7 +11,6 @@ import Combine
 
 class ReminderListVC: UIViewController {
     
-    
     @IBOutlet weak var noReminderView: UIView!
     @IBOutlet weak var reminderListTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -20,7 +19,6 @@ class ReminderListVC: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
     private let searchTextSubject = PassthroughSubject<String, Never>()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +61,7 @@ class ReminderListVC: UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        print(Realm.Configuration.defaultConfiguration.fileURL ?? "")
     }
     
     
@@ -183,12 +181,7 @@ extension ReminderListVC: UISearchBarDelegate {
         debounceSearch()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { view.endEditing(true) }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        viewModel.performSearch("")
-        view.endEditing(true)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { view.endEditing(true)
     }
 }
 

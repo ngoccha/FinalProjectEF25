@@ -8,15 +8,30 @@
 import UIKit
 
 class TagCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var tagView: UIView!
     @IBOutlet weak var tagLabel: UILabel!
+    
+    private var currentTag: Tag?
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                tagView.backgroundColor = currentTag?.color
+            } else {
+                tagView.backgroundColor = .neutral3
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.layer.cornerRadius = 16
+        tagView.layer.cornerRadius = 8
+    }
+    
+    func configTitle(tag: Tag) {
+        currentTag = tag
+        tagLabel.text = tag.rawValue
     }
 
-    func configure(title: String, selected: Bool) {
-           tagLabel.text = title
-    }
 }

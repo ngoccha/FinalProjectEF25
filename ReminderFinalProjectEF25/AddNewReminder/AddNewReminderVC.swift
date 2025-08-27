@@ -13,6 +13,8 @@ class AddNewReminderVC: UIViewController {
     @IBOutlet weak var firstSectionStackView: UIStackView!
     @IBOutlet weak var secondSectionStackView: UIStackView!
     @IBOutlet weak var thirdSectionStackView: UIStackView!
+    @IBOutlet weak var thirdSectionView: UIView!
+    @IBOutlet weak var dateSectionView: UIView!
     @IBOutlet weak var dateStackView: UIStackView!
     
     @IBOutlet weak var titleView: UIView!
@@ -43,6 +45,9 @@ class AddNewReminderVC: UIViewController {
         firstSectionStackView.layer.cornerRadius = 12
         secondSectionStackView.layer.cornerRadius = 12
         thirdSectionStackView.layer.cornerRadius = 12
+        thirdSectionView.layer.cornerRadius = 12
+        dateSectionView.layer.cornerRadius = 12
+        
         titleView.layer.cornerRadius = 12
         descriptionView.layer.cornerRadius = 12
         
@@ -78,7 +83,6 @@ class AddNewReminderVC: UIViewController {
             dueDatePicker.date = Date()
         }
     }
-    
     
     @IBAction func goToTagButton(_ sender: Any) {
         let tagVC = TagVC()
