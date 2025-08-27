@@ -12,17 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TagCell" customModule="ReminderFinalProjectEF25" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="86" height="29"/>
+            <rect key="frame" x="0.0" y="0.0" width="186" height="138"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="86" height="29"/>
+                <rect key="frame" x="0.0" y="0.0" width="186" height="138"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yx-i2-pYI">
-                        <rect key="frame" x="0.0" y="0.0" width="86" height="29"/>
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="138"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfU-VZ-Jr7">
-                                <rect key="frame" x="23.333333333333332" y="5" width="39.666666666666671" height="19.333333333333332"/>
+                                <rect key="frame" x="73.333333333333329" y="59.333333333333336" width="39.666666666666671" height="19.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -43,12 +43,12 @@
                 <constraint firstItem="6Yx-i2-pYI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pZg-VP-b7L"/>
                 <constraint firstItem="6Yx-i2-pYI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qL9-f7-02P"/>
             </constraints>
-            <size key="customSize" width="86" height="29"/>
+            <size key="customSize" width="186" height="138"/>
             <connections>
                 <outlet property="tagLabel" destination="hfU-VZ-Jr7" id="0de-3N-EaO"/>
                 <outlet property="tagView" destination="6Yx-i2-pYI" id="Nmw-oe-MkN"/>
             </connections>
-            <point key="canvasLocation" x="155.72519083969465" y="10.211267605633804"/>
+            <point key="canvasLocation" x="400" y="111.26760563380282"/>
         </collectionViewCell>
     </objects>
     <resources>
